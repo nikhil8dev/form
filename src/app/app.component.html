@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6 ">
+
+      <div class="shadow p-3 mb-5 bg-white " style="width:50%; height: 30px ; font-size: xx-small;" >For Design Solutions</div>
+        <p style="font-size:xx-small">In short span having delivered 79+ project across continental Europe and Asia, we have capability to deliver world class food and beverage design for roll outs. </p>
+        <p style="font-size:xx-small">We want exceptional partnership as much as you do </p>
+        <p style="font-size:xx-small">Interested, please log in below</p>
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+          <div class="d-flex flex-row" >
+
+          <div class="form-group p-1">
+             <input type="text" style="width:160px; height: 30px; font-size:x-small" formControlName="fullName" placeholder="Name"  >
+         </div>
+
+         <div class="form-group p-1" >
+          <input type="number"  style="width:160px; height: 30px; font-size:x-small ;" formControlName="phone" placeholder="Contact No">
+         </div>
+
+        </div>
+         <div class="form-group">
+                 <input type="email" style="width:100%; height: 30px; font-size:x-small ;" placeholder="Email">
+         </div>
+
+         <div class="form-group" >
+              <textarea name = "message"  style="width:100%; height: 100px; font-size:x-small ;" placeholder = "Your message" formControlName="message"  [ngClass]="{'is-invalid': contactForm.get('message').touched && contactForm.get('message').invalid}"></textarea>
+              <br/>
+             <div class="invalid-feedback">
+                <div>message is required</div>
+               </div>
+            </div>
+
+            <div  class="m-auto">
+              <input  type = "submit" value = "Send">
+             </div>
+        </form>
+    </div>
+
+
+
+    <div class="col-6 ">
+      <div class="shadow p-3 mb-5 bg-white " style="width:50%; height: 30px ; font-size: xx-small;" >For Careers</div>
+       <p style="font-size:xx-small">We are always looking for high performing colleagues in the domain of Architecture/Rendering/Graphic Design and CAD Works with relevant hands on experties on latest tools.</p>
+       <p style="font-size:xx-small">If your ambition matches ours's, This is the place to start  </p>
+
+       <label style="display: none;">
+        <input id="upload_file" placeholder="Resume" type="file" #file (change)="onChange(file)">
+      </label>
+      <input readonly="true" type="text" id="file" (focus)="trigger()">
+
+      <div *ngIf="fileName">
+        <p>{{fileName}}</p>
+        <button type="button" (click)="sendFile()">Send file</button>
+      </div>
+    </div>
+
+
+  </div>
+
+
+</div>
