@@ -1,36 +1,40 @@
-<div class="container">
+<div class="container" style="background-color: orange;">
   <div class="row">
-    <div class="col-6 ">
+    <div class="col-6 mt-3 ">
 
-      <div class="shadow p-3 mb-5 bg-white " style="width:50%; height: 30px ; font-size: xx-small;" >For Design Solutions</div>
-        <p style="font-size:xx-small">In short span having delivered 79+ project across continental Europe and Asia, we have capability to deliver world class food and beverage design for roll outs. </p>
-        <p style="font-size:xx-small">We want exceptional partnership as much as you do </p>
-        <p style="font-size:xx-small">Interested, please log in below</p>
+      <div class="shadow pl-4 pt-2 m-auto bg-white " style="width:200px; height: 30px ; font-size: xx-small;" >For Design Solutions</div>
+      <div class="para mt-3 ">
+      <p style="font-size:xx-small; text-align: left; display:flex; flex-direction: column; align-items: center">In short span having delivered 79+ project across continental<br>
+         Europe and Asia, we have capability to deliver world class <br>
+         food and beverage design for roll outs. </p>
+        <p style="font-size:xx-small; text-align: left; display:flex; flex-direction: column; align-items: center;">We want exceptional partnership as much as you do </p>
+        <p style="font-size:xx-small; text-align: left; display:flex; flex-direction: column; align-items: center ">Interested, please log in below</p>
+        </div>
         <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
           <div class="d-flex flex-row" >
 
           <div class="form-group p-1">
-             <input type="text" style="width:160px; height: 30px; font-size:x-small" formControlName="fullName" placeholder="Name"  >
+             <input type="text" style="width:200px; height: 30px; font-size:xx-small; border-radius: 5px; " formControlName="fullName" placeholder="Name"  >
          </div>
 
          <div class="form-group p-1" >
-          <input type="number"  style="width:160px; height: 30px; font-size:x-small ;" formControlName="phone" placeholder="Contact No">
+          <input type="number"  style="width:200px; height: 30px; font-size:xx-small; border-radius: 5px; " formControlName="phone" placeholder="Contact No">
          </div>
 
         </div>
          <div class="form-group">
-                 <input type="email" style="width:100%; height: 30px; font-size:x-small ;" placeholder="Email">
+                 <input type="email" style="width:100%; height: 30px; font-size:xx-small ; border-radius: 5px;" placeholder="Email">
          </div>
 
          <div class="form-group" >
-              <textarea name = "message"  style="width:100%; height: 100px; font-size:x-small ;" placeholder = "Your message" formControlName="message"  [ngClass]="{'is-invalid': contactForm.get('message').touched && contactForm.get('message').invalid}"></textarea>
+              <textarea name = "message"  style="width:100%; height: 100px; font-size:xx-small; border-radius: 5px;" placeholder = "Your message" formControlName="message"  [ngClass]="{'is-invalid': contactForm.get('message').touched && contactForm.get('message').invalid}"></textarea>
               <br/>
              <div class="invalid-feedback">
                 <div>message is required</div>
                </div>
             </div>
 
-            <div  class="m-auto">
+            <div  class="">
               <input  type = "submit" value = "Send">
              </div>
         </form>
@@ -38,11 +42,14 @@
 
 
 
-    <div class="col-6 ">
-      <div class="shadow p-3 mb-5 bg-white " style="width:50%; height: 30px ; font-size: xx-small;" >For Careers</div>
-       <p style="font-size:xx-small">We are always looking for high performing colleagues in the domain of Architecture/Rendering/Graphic Design and CAD Works with relevant hands on experties on latest tools.</p>
+    <div class="col-6 mt-3 ">
+      <div class="shadow pl-5 pt-2 m-auto bg-white " style="width:200px; height: 30px ; font-size: xx-small;" >For Careers</div>
+      <div class="para mt-3  ">
+      <p style="font-size:xx-small">We are always looking for high performing colleagues in the <br>
+           domain of Architecture/Rendering/Graphic Design and <br>
+       center CAD Works with relevant hands on experties on latest tools.</p>
        <p style="font-size:xx-small">If your ambition matches ours's, This is the place to start  </p>
-
+      </div>
        <label style="display: none;">
         <input id="upload_file" placeholder="Resume" type="file" #file (change)="onChange(file)">
       </label>
